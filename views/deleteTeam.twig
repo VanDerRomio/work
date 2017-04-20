@@ -1,0 +1,11 @@
+<!-- Main -->
+<section id="main" class="w-60">
+    <div id="" class="flex-column jc-between">
+        {% if answer == "delete" %}
+            <h3>команда успішно видалена із бази даних</h3>
+        {% else %}
+            <h3>вибачте, сталася помилка. спробуйте ще раз</h3>
+        {% endif %}
+        <a class="link-black-white bshadow brr-4 item-end p-04 fs-12 m-b-05" href="{{ btn_index_page }}"><i class="fa fa-list" aria-hidden="true"></i> Список команд</a>
+    </div>
+</section>

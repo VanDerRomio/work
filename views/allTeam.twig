@@ -1,0 +1,31 @@
+<!-- Main -->
+<section id="main" class="w-60">
+	<div id="" class="flex-column jc-between">
+		<a class="link-black-white bshadow brr-4 item-end p-04 fs-12 m-b-05" href="{{ btn_add }}"><i class="fa fa-plus" aria-hidden="true"></i> Додати команду</a>
+		{% if answer == "ok" %}
+			<table class="m-b-05 w-100 bshadow fs-13">
+				<tr>
+					<th>id</th>
+					<th>назва</th>
+					<th>рік заснування</th>
+					<th>опції</th>
+				</tr>
+				{% for item in data %}
+					<tr>
+						<th>{{ item.id }}</th>
+						<th><a href="{{ btn_team }}{{ item.id }}" class="text-dec-no w-100 block no-upper">{{ item.name }}</a></th>
+						<th>{{ item.date_create }}</th>
+						<th>
+							<div class="flex-row aitems-center jc-around p-02">
+								<a class="link-black-orange bshadow brr-4 p-02" href="{{ btn_edit }}{{  item.id }}" title="Редагувати"><i class="fa fa-edit" aria-hidden="true"></i></a>
+								<a class="link-black-orange bshadow brr-4 p-02" href="{{ btn_delete }}{{ item.id }}" title="Видалити"><i class="fa fa-remove" aria-hidden="true"></i></a>
+							</div>
+						</th>
+					</tr>
+				{% endfor %}
+			</table>
+		{% else %}
+			<h3>вибачте, сталася помилка. спробуйте ще раз</h3>
+		{% endif %}
+	</div>
+</section>

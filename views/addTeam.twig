@@ -1,0 +1,25 @@
+<!-- Main -->
+<section id="main" class="w-60">
+    <div id="" class="flex-column jc-between">
+        {% if answer == "form" %}
+            <form method="post" action="">
+                <table class="m-b-05 w-100 bshadow fs-13">
+                    <tr>
+                        <th>назва</th>
+                        <th>рік заснування</th>
+                    </tr>
+                    <tr>
+                        <th><input class="no-upper fs-12 no-upper" type="text" name="name" placeholder="name" value="" required /></th>
+                        <th><input class="no-upper fs-12 no-upper" type="date" name="date" placeholder="date_create" value="" required /></th>
+                    </tr>
+                </table>
+                <input type="submit" value="Додати команду" class="link-black-white bshadow brr-4 fl-right p-04 fs-12 m-b-05 upper">
+            </form>
+        {% elseif answer == "save" %}
+            <h3>команда успішно додана до бази даних</h3>
+        {% else %}
+            <h3>вибачте, сталася помилка. спробуйте ще раз</h3>
+        {% endif %}
+        <a class="link-black-white bshadow brr-4 item-end p-04 fs-12 m-b-05" href="{{ btn_index_page }}"><i class="fa fa-list" aria-hidden="true"></i> Список команд</a>
+    </div>
+</section>
