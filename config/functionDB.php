@@ -28,6 +28,7 @@ class functionDB
             return false;
         }
     }
+    
     public static function setValue($key, $value)
     {
         //запит до БД

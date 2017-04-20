@@ -1,18 +1,10 @@
 <?php
-//mysql.hostinger.com.ua
-/*return array(
-	'host' => 'mysql.hostinger.com.ua',
-	'dbname' => 'u542280906_dylem',
-	'user' => 'u542280906_root',
-	'password' => 'u542280906_',
-);*/
-
 //localhost
 return array(
 	'host' => 'localhost',
-	'dbname' => 'colepsze',
+	'dbname' => 'work',
 	'user' => 'root',
-	'password' => 'root',
+	'password' => '',
 	);
 
 //localhost masterm4.beget.tech

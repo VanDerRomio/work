@@ -5,8 +5,8 @@ class Page404
 	 *
 	 * @return array|mixed
 	 */
-	public static function getAboutList()
+	public static function getList()
 	{
-		return true;
+		return array('index_page'=>HTTP_SITE);
 	}
 }

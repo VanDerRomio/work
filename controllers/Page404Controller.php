@@ -5,9 +5,10 @@ class Page404Controller
 {
 	public function actionIndex()
 	{
-		$aboutList = array();
+		$List = array();
+		$List = Page404::getList();
 
-		View::setContent(PAGE_404, $aboutList);
+		View::setContent(PAGE_404, $List);
 		return true;
 	}
 }

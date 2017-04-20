@@ -5,19 +5,19 @@ class View
 	public static $content_array = array();
 	public static $nameContent;
 
-//задаємо значення даних
+	//задаємо значення даних
 	public static function setContent($name, $value)
 	{
 		View::$content_array = $value;
 		View::$nameContent = $name;
 	}
-//видаляємо значення даних
+	//видаляємо значення даних
 	public static function unsetContent($name)
 	{
 		unset(View::$content_array[$name], $nameContent);
 	}
 
-//повертаємо стрічку назви файла для вставки в контент
+	//повертаємо стрічку назви файла для вставки в контент
 	public static function getIncludeView()
 	{
 		//echo "Получение '$name'\n";
@@ -25,58 +25,39 @@ class View
 		{
 			switch(View::$nameContent)
 			{
-				case INDEX_PAGE:
-					return ROOT."/views/indexPage.php";
+				case ALL_TEAM:
+					return "allTeam.twig";
 					break;
-				case ACTIVATION_PAGE:
-					return ROOT."/views/activation.php";
+				case ADD_TEAM:
+					return "addTeam.twig";
 					break;
-				case REPAIR_PASS_PAGE:
-					return ROOT."/views/repairPass.php";
+				case DELETE_TEAM:
+					return "deleteTeam.twig";
 					break;
-				case ADD_DYLEMAT:
-					return ROOT."/views/addDylemat.php";
+				case EDIT_TEAM:
+					return "editTeam.twig";
 					break;
-				case SHOW_DYLEMAT:
-					return ROOT."/views/showDylemat.php";
+				//******************************
+				case ADD_PLAYER:
+					return "addPlayer.twig";
 					break;
-				case SHOW_INFO_DYLEMAT:
-					return ROOT."/views/showInfoDylemat.php";
+				case DELETE_PLAYER:
+					return "deletePlayer.twig";
 					break;
-				case ABOUT:
-					return ROOT."/views/about.php";
+				case EDIT_PLAYER:
+					return "editPlayer.twig";
 					break;
-				case REGULAMIN:
-					return ROOT."/views/regulamin.php";
+				case TEAM:
+					return "team.twig";
 					break;
-				case CONTACT:
-					return ROOT."/views/contact.php";
-					break;
-				case NOINSITE:
-					return ROOT."/views/noinsite.php";
-					break;
-				case INSITE:
-					return ROOT."/views/insite.php";
-					break;
-				case FACEBOOK_PAGE:
-					return ROOT."/views/social_enter.php";
-					break;
-				case VK_PAGE:
-					return ROOT."/views/social_enter.php";
-					break;
-				case TWITTER_PAGE:
-					return ROOT."/views/social_enter.php";
-					break;
-				case GPLUS_PAGE:
-					return ROOT."/views/social_enter.php";
-					break;
+				//*****************************
 				case PAGE_404:
-					return ROOT."/views/404.php";
+					return "404.twig";
 					break;
 			}
 		}
 	}
-//повертаємо значення даних
+	//повертаємо значення даних
 	public static function getContent()
 	{
 		return View::$content_array;
